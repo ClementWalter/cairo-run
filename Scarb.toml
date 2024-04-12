@@ -1,0 +1,17 @@
+[package]
+name = "hello_scarb"
+version = "0.1.0"
+edition = "2023_11"
+
+[dependencies]
+starknet = ">=2.6.3"
+
+[lib]
+sierra = true
+casm = true
+sierra-text = true
+
+[[target.starknet-contract]]
+sierra = true
+casm = true
+casm-add-pythonic-hints = true

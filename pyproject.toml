@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "hello-scarb"
+version = "0.1.0"
+description = ""
+authors = ["Clément Walter <clement0walter@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+cairo-lang = "0.13.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[tool.autoflake]
+in_place = true
+remove_unused_variables = true
+remove_all_unused_imports = true

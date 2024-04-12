@@ -10,8 +10,3 @@ starknet = ">=2.6.3"
 sierra = true
 casm = true
 sierra-text = true
-
-[[target.starknet-contract]]
-sierra = true
-casm = true
-casm-add-pythonic-hints = true

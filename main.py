@@ -1,27 +1,14 @@
 import json
 import logging
-import os
 import re
-import shutil
 from pathlib import Path
 from time import perf_counter
-from typing import AsyncGenerator
 
 from starkware.cairo.lang.cairo_constants import DEFAULT_PRIME
 from starkware.cairo.lang.compiler.cairo_compile import compile_cairo, get_module_reader
-from starkware.cairo.lang.compiler.scoped_name import ScopedName
-from starkware.cairo.lang.tracer.tracer_data import TracerData
-from starkware.cairo.lang.vm import cairo_runner
 from starkware.cairo.lang.vm.cairo_runner import CairoRunner
 from starkware.cairo.lang.vm.memory_dict import MemoryDict
-from starkware.cairo.lang.vm.memory_segments import FIRST_MEMORY_ADDR as PROGRAM_BASE
-from starkware.starknet.business_logic.execution.execute_entry_point import (
-    ExecuteEntryPoint,
-)
-from starkware.starknet.business_logic.state.state_api_objects import BlockInfo
 from starkware.starknet.compiler.starknet_pass_manager import starknet_pass_manager
-from starkware.starknet.definitions.general_config import StarknetGeneralConfig
-from starkware.starknet.testing.starknet import Starknet
 
 logger = logging.getLogger()
 

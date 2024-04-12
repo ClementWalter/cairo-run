@@ -1,5 +1,5 @@
 fn main() -> felt252 {
-    fib(16)
+    fib(20)
 }
 
 fn fib(mut n: felt252) -> felt252 {
